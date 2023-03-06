@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'cash_flow.apps.CashFlowConfig',
 ]
 
 MIDDLEWARE = [
@@ -48,7 +49,6 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-# TODO contiuare da qui: https://docs.djangoproject.com/en/4.1/intro/tutorial02/#activating-models
 
 ROOT_URLCONF = 'project.urls'
 

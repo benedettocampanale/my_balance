@@ -1,4 +1,7 @@
+from django.contrib.auth import get_user_model
 from django.db import models
+
+User = get_user_model()
 
 
 class Label(models.Model):
@@ -13,6 +16,7 @@ class Label(models.Model):
 
 
 class CashFlow(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='cash_flows')
     label = models.ForeignKey("Label", on_delete=models.CASCADE, related_name='cash_flows')
     amount = models.DecimalField(max_digits=10, decimal_places=2, help_text='Can be negative')
     flow_date = models.DateTimeField()
